@@ -1,38 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+::-webkit-scrollbar {
+  background-color: #191919;
+  height: .5rem;
+  width: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #85784a;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #191919;
+  -webkit-box-shadow: inset 0 0 6px #191919;
+}
+
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #201D32;
+  padding: 08px;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 16px;
+  box-shadow: 0 8x 16px rgba(0, 0, 0, 0.365);
+  z-index: 100;
+  border-bottom: 2px solid #d19e46;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header img {
+  height: 60px; 
+  margin-right: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav {
+  display: flex;
+  box-shadow: 0 8x 16px rgba(0, 0, 0,);
+
 }
+
+nav a {
+  margin: 8px;
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #d19e46;
+}
+
+.active-link {
+  color: #d19e46;
+}
+
+.App-footer {
+  background-color: #d19e46;
+  padding: 08px;
+  color: white;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  gap: 3px;
+  text-align: left;
+
+}
+
+.Publico-content {
+  background-color: #201d328e;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.home-content {
+  padding: 08px;
+  color: white;
+  display: flex;
+  justify-content: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: left;
+}
+
+.home-logo {
+  width: 70%;
+  height: 60%;
+  padding: 8px;
+}
+
+
+.foto-content1 {
+  position: fixed;
+  right: -12%;
+  top: 0;
+  height: 120vh;
+  width: auto;
+  z-index: 2;
+  transition: transform 0.3s ease-in-out;
+}
+
+.foto-content2 {
+  position: fixed;
+  right: -25%;
+  top: -10%;
+  height: 120vh;
+  width: auto;
+  z-index: 2;
+  transition: transform 0.3s ease-in-out;
+}
+
+.foto-content3 {
+  position: fixed;
+  right: -10%;
+  top: -3%;
+  height: 120vh;
+  width: auto;
+  z-index: 2;
+  transition: transform 0.3s ease-in-out;
+}
+
+.foto-content4 {
+  position: fixed;
+  right: -25%;
+  top: -10%;
+  height: 120vh;
+  width: auto;
+  z-index: 2;
+  transition: transform 0.3s ease-in-out;
+}
+
+.foto-content1:hover, 
+.foto-content2:hover,
+.foto-content3:hover,
+.foto-content4:hover {
+  transform: scale(1.1);
+}
+
+.main-content {
+  height: 429px; /* Altura fixa para ativar a rolagem */
+  overflow-y: auto; /* Ativa a rolagem vertical */
+  width: 100%; /* Largura completa */
+  background-image: url(./Assets/Images/Fundo1.jpg); /* Imagem de fundo */
+  display: flex; /* Usando flex para alinhar itens internamente */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.text-content {
+  width: 50%; /* Reduzindo a largura para tornar o texto mais vertical */
+  padding: 16px;
+  margin-right: auto; /* Mantém o texto alinhado à esquerda */
+  text-align: left; /* Assegura alinhamento à esquerda */
+  color: white;
+  font-weight: bold;
+  font-size: 18px; /* Mantém um tamanho de fonte adequado para leitura */
+  line-height: 1.6; /* Espaço entre linhas para melhorar a legibilidade */
+  box-shadow: 0 8x 16px rgba(0, 0, 0,);
+  padding: 32px;
+}
+
