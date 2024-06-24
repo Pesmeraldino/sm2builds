@@ -19,21 +19,25 @@
   -webkit-box-shadow: inset 0 0 6px #191919;
 }
 
-
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
 .App-header {
   background-color: #201D32;
-  padding: 08px;
+  padding: 8px;
   color: white;
   display: flex;
   align-items: center;
   justify-content: start;
   font-size: 16px;
-  box-shadow: 0 8x 16px rgba(0, 0, 0, 0.365);
-  z-index: 100;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.365);
+  z-index: 1;
   border-bottom: 2px solid #d19e46;
 }
 
@@ -44,8 +48,7 @@
 
 nav {
   display: flex;
-  box-shadow: 0 8x 16px rgba(0, 0, 0,);
-
+  box-shadow: 0 8px 16px rgba(0, 0, 0,);
 }
 
 nav a {
@@ -67,78 +70,40 @@ nav a:hover {
 
 .App-footer {
   background-color: #d19e46;
-  padding: 08px;
+  padding: 8px;
   color: white;
   display: flex;
   justify-content: start;
   flex-direction: column;
   gap: 3px;
   text-align: left;
-
+  margin-top: auto;
 }
 
 .Publico-content {
-  background-color: #201d328e;
   display: flex;
   width: 100%;
-  height: 100%;
+  flex-grow: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .home-content {
-  padding: 08px;
+  padding: 16px;
   color: white;
   display: flex;
-  justify-content: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 8px; 
   text-align: left;
+  align-items: flex-start;
+  position: absolute;
+  left: 8px;
 }
 
 .home-logo {
-  width: 70%;
-  height: 60%;
+  width: 40%;
+  height: 40%;
   padding: 8px;
-}
-
-
-.foto-content1 {
-  position: fixed;
-  right: -12%;
-  top: 0;
-  height: 120vh;
-  width: auto;
-  z-index: 2;
-  transition: transform 0.3s ease-in-out;
-}
-
-.foto-content2 {
-  position: fixed;
-  right: -25%;
-  top: -10%;
-  height: 120vh;
-  width: auto;
-  z-index: 2;
-  transition: transform 0.3s ease-in-out;
-}
-
-.foto-content3 {
-  position: fixed;
-  right: -10%;
-  top: -3%;
-  height: 120vh;
-  width: auto;
-  z-index: 2;
-  transition: transform 0.3s ease-in-out;
-}
-
-.foto-content4 {
-  position: fixed;
-  right: -25%;
-  top: -10%;
-  height: 120vh;
-  width: auto;
-  z-index: 2;
-  transition: transform 0.3s ease-in-out;
 }
 
 .foto-content1:hover, 
@@ -149,24 +114,73 @@ nav a:hover {
 }
 
 .main-content {
-  height: 429px; /* Altura fixa para ativar a rolagem */
-  overflow-y: auto; /* Ativa a rolagem vertical */
-  width: 100%; /* Largura completa */
-  background-image: url(./Assets/Images/Fundo1.jpg); /* Imagem de fundo */
-  display: flex; /* Usando flex para alinhar itens internamente */
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  flex-grow: 1;
+  width: 100%;
+  background-color: #201d328e !important;
+  background-image: url(./Assets/Images/Fundo1.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .text-content {
-  width: 50%; /* Reduzindo a largura para tornar o texto mais vertical */
-  padding: 16px;
-  margin-right: auto; /* Mantém o texto alinhado à esquerda */
-  text-align: left; /* Assegura alinhamento à esquerda */
+  width: 50%;
+  padding: 32px;
+  margin-right: auto;
+  text-align: left;
   color: white;
   font-weight: bold;
-  font-size: 18px; /* Mantém um tamanho de fonte adequado para leitura */
-  line-height: 1.6; /* Espaço entre linhas para melhorar a legibilidade */
-  box-shadow: 0 8x 16px rgba(0, 0, 0,);
-  padding: 32px;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
+.text-content-home {
+  width: 100%;
+  padding: 32px;
+  text-align: left; 
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.foto-content1 {
+  position: absolute;
+  right: -12%;
+  top: 0;
+  height: 120vh;
+  width: auto;
+  z-index: 2;
+  transition: transform 0.3s ease-in-out;
+}
+
+.foto-content2 {
+  position: absolute;
+  right: -25%;
+  top: -10%;
+  height: 120vh;
+  width: auto;
+  z-index: 2;
+  transition: transform 0.3s ease-in-out;
+}
+
+.foto-content3 {
+  position: absolute;
+  right: -10%;
+  top: -3%;
+  height: 120vh;
+  width: auto;
+  z-index: 3;
+  transition: transform 0.3s ease-in-out;
+}
+
+.foto-content4 {
+  position: absolute;
+  right: 0%;
+  top: -10%;
+  height: 120vh;
+  width: auto;
+  z-index: 2;
+  transition: transform 0.3s ease-in-out;
+}

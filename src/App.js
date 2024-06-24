@@ -14,7 +14,7 @@ function Home() {
   return <div className='Publico-content'>
     <div className='home-content'>
       <img className='home-logo' src={logosm2} alt='imagem deus'/>
-      <p className='text-content'>
+      <p className='text-content-home'>
       "SUA BUILD ENCONTRA AQUI"
      </p>
     </div>
